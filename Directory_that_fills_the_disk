@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+# created by: Ilay Ron
+# purpose: find on linux the directory that fills the disk and try to drill down the most heavy
+# date: 29/10/2020
+# version: v1.0.0
+##############################################################################################
+
+#this command will find the directory that fills the disk and sort down to most heavy
+
+sudo du -a / 2>/dev/null |sort -n -r | head -20
